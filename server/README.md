@@ -95,7 +95,8 @@ cd client
 
 # STEP 2: Install the required dependencies
 
-```npm install
+```
+npm install
 ```
 
 # STEP 3: Start the client:
