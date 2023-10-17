@@ -46,8 +46,14 @@ CREATE TABLE people (
 These commands will create a new database and a "people" table within it. You can execute these SQL commands in a PostgreSQL client or using the psql command-line tool.
 
 # STEP 4 :CONNECT SERVER WITH DATABASE 
-After you have cloned or downloaded the project using the following command: git clone https://github.com/Ioannesi/PERN-API-PEOPLE.git.
+After you have cloned or downloaded the project using the following command: 
+
+```
+git clone https://github.com/Ioannesi/PERN-API-PEOPLE.git.
+```
+
 Οpen the .env file with a text editor and fill in the following information:
+
 ```
 DB_NAME=: "Replace this with the name of your PostgreSQL database"
 DB_USERNAME=: "Replace this with your PostgreSQL database username"
