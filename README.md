@@ -12,7 +12,7 @@ The database is initially empty. When you have set up database, run both the bac
 
 # POSTGRES DATABASE AND RUN THE SERVER
 # Step 1: Install PostgreSQL
-If you haven't already installed PostgreSQL, you can do so from the official PostgreSQL website: https://www.postgresql.org/download/.
+If you haven't already install PostgreSQL, you can do so from the official PostgreSQL website: https://www.postgresql.org/download/.
 
 
 # Step 2:Create a Database and Connect to PostgreSQL
@@ -85,9 +85,10 @@ npm start
 ```
 
 The server application should now be up and running on your local machine.
-`server has started on Port 5000
-Executing (default): SELECT 1+1 AS result
+```
+server has started on Port 5000
 Connection has been established successfully.`
+```
 Please note that you need to have Node.js and npm installed on your system before running the client application.
 
 # RUNNING THE CLIENT
