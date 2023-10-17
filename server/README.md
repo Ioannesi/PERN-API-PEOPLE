@@ -1,8 +1,8 @@
-## PERN APU PEOPLE
+## PERN API PEOPLE
 Backend: Built with Node.js and Express for handling API requests and interacting with the PostgreSQL database.
 Frontend: Developed using React.js to provide a user-friendly interface for managing records.
 Database: PostgreSQL is used as the data store to store and retrieve record information.
-This PERN API project is designed to offer a versatile solution for record management, suitable for a wide range of applications and use cases.
+PERN API project is designed to offer a versatile solution for record management, suitable for a wide range of applications and use cases.
 
 ## Prerequisites
 - Node.js version: v6.10.3
