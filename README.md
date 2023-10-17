@@ -123,7 +123,7 @@ Do same for the file editPerson.js and newPerson.js
 cd client
 ```
 
-## STEP 1: Install the required dependencies
+## STEP 3: Install the required dependencies
 
 ```
 npm install
