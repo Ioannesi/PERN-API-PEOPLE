@@ -31,14 +31,14 @@ After creating the database, you can proceed to Step 3.
 
 # Step 3: Create a "People" Table
 Next, you can create the "people" table:
-```(((
+```
 CREATE TABLE people (
     id UUID DEFAULT UUID_GENERATE_V4() PRIMARY KEY,
     firstname VARCHAR(255),
     lastname VARCHAR(255),
     dateofbirth DATE
 );
-)))```
+```
 
 These commands will create a new database and a "people" table within it. You can execute these SQL commands in a PostgreSQL client or using the psql command-line tool.
 
