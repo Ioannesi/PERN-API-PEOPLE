@@ -84,19 +84,13 @@ npm install
 npm start
 ```
 
-<<<<<<< HEAD
 The server application should now be up and running on your local machine.
-```
-server has started on Port 5000
-Connection has been established successfully.`
-=======
-The server application should now be up and running on your local machine.You will see
 
 ```
 server has started on Port 5000
-Connection has been established successfully.
->>>>>>> 79c8d52d70aa761203795d75a9f72c641d0899b8
+Connection has been established successfully.`
 ```
+
 Please note that you need to have Node.js and npm installed on your system before running the client application.
 
 # RUNNING THE CLIENT
