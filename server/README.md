@@ -17,7 +17,9 @@ If you haven't already installed PostgreSQL, you can do so from the official Pos
 # Step 2:Create a Database and Connect to PostgreSQL
 After installing PostgreSQL, open a terminal or command prompt and execute the following commands to create the database and connect to PostgreSQL:
 
-`psql -U your_username`
+```
+psql -U your_username
+```
 In the above command, replace "your_username" with the username you created during PostgreSQL installation.
 
 You will be prompted for the user's password. Enter your password you also create during PostgreSQL installation.Code is not visible when entering. 
@@ -58,16 +60,19 @@ Your .env file should now be properly configured with the necessary database det
 You can run the server-side of the project by following these steps:
 
 # STEP 5:Navigate to the 'server' directory
+
 ```
 cd server
 ```
 
 # STEP 6: Install the required dependencies
+
 ```
 npm install
 ```
 
 # STEP 7: Start the server:
+
 ```
 npm start
 ```
@@ -82,15 +87,18 @@ Please note that you need to have Node.js and npm installed on your system befor
 You can run the server-side of the project by following these steps:
 
 # STEP 5:Navigate to the 'client' directory
+
 ```
 cd client
 ```
 
 # STEP 6: Install the required dependencies
+
 ```npm install
 ```
 
 # STEP 7: Start the client:
+
 ```
 npm start
 ```
