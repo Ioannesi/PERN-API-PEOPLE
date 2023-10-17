@@ -3,8 +3,7 @@ Backend: Built with Node.js and Express for handling API requests and interactin
 Frontend: Developed using React.js to provide a user-friendly interface for managing records.
 Database: PostgreSQL is used as the data store to store and retrieve record information.
 PERN API project is designed to offer a versatile solution for record management, suitable for a wide range of applications and use cases.
-The database is initially empty. 
-The database and the 'people' table are initially empty. When you have set up and run both the backend and the client, you can create records by selecting the 'Add Person' option from the main navigation menu and manage (EDIT,DELETE,SEARCH,SORTING) them by selecting "ALL PEOPLE" also in main navigation.
+The database is initially empty. When you have set up database, run both the backend and the client, you can create records by selecting the 'Add Person' option from the main navigation menu and manage (EDIT,DELETE,SEARCH,SORTING) them by selecting "ALL PEOPLE" also in main navigation.
 
 # Prerequisites
 - Node.js version: v6.10.3
