@@ -53,7 +53,7 @@ const handleClickDelete =(id)=> {
       const fetchPeople = async () => {
         try {
           const responseData = await sendRequest(
-            'http://192.168.2.6:5000/people'
+            '[PUTYOURIPV4HERE]:5000/people'
           );
           setPeople(responseData);
          
@@ -69,7 +69,7 @@ const deletePerson= async (deletedId) => {
  
   try {
     setShow(false);
-    await sendRequest(`http://192.168.2.6:5000/people/${deletedId}`, 'DELETE');
+    await sendRequest(`[PUTYOURIPV4HERE]:5000/people/${deletedId}`, 'DELETE');
     props.onDelete(props.id);
 
   } catch (err) {}
@@ -98,7 +98,7 @@ const searchPeople = async () => {
     console.log(search)
     try {
       
-      const responseData  = await sendRequest('http://192.168.2.6:5000/people/search', 'POST', JSON.stringify(search), {
+      const responseData  = await sendRequest('[PUTYOURIPV4HERE]:5000/people/search', 'POST', JSON.stringify(search), {
         'Content-Type': 'application/json'
       });
         const resultCount = responseData.length;
@@ -114,7 +114,7 @@ const searchPeople = async () => {
 };
   
 
-    // // Μεθοδος για την ταξινόμηση αλφαβητικά
+  
     const sortTable = () => {
       
       const sortedPeople = [...people];

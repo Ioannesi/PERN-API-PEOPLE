@@ -43,7 +43,7 @@ const EditPerson = () => {
           try {
             console.log(peopleId)
             const responseData = await sendRequest(
-              `http://192.168.2.6:5000/people/${peopleId}`
+              `[PUTYOURIPV4HERE]:5000/people/${peopleId}`
             );
             setLoadedPerson(responseData);
            
@@ -64,7 +64,7 @@ const EditPerson = () => {
             dateofbirth: data.dateofbirth,
           }
           await sendRequest(
-            `http://192.168.2.6:5000/people/${peopleId}`,
+            `____________________/people/${peopleId}`,
             'PUT',
             JSON.stringify(updateData),
             {

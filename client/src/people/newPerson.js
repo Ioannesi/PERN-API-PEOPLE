@@ -34,7 +34,7 @@ const NewPerson = () => {
         }
   
         // Κάντε το αίτημα POST στον εξυπηρετητή
-         await sendRequest("http://192.168.2.6:5000/people",
+         await sendRequest("[PUTYOURIPV4HERE]:5000/people",
           'POST',
           JSON.stringify(postData),
           {
