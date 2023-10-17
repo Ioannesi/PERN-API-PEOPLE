@@ -58,9 +58,9 @@ Your .env file should now be properly configured with the necessary database det
 You can run the server-side of the project by following these steps:
 
 # STEP 5:Navigate to the 'server' directory
-```
+```(((
 cd server
-```
+)))```
 
 # STEP 6: Install the required dependencies
 ```
