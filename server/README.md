@@ -3,13 +3,15 @@ Backend: Built with Node.js and Express for handling API requests and interactin
 Frontend: Developed using React.js to provide a user-friendly interface for managing records.
 Database: PostgreSQL is used as the data store to store and retrieve record information.
 PERN API project is designed to offer a versatile solution for record management, suitable for a wide range of applications and use cases.
+The database is initially empty. 
+The database and the 'people' table are initially empty. When you have set up and run both the backend and the client, you can create records by selecting the 'Add Person' option from the main navigation menu and manage (EDIT,DELETE,SEARCH,SORTING) them by selecting "ALL PEOPLE" also in main navigation.
 
 # Prerequisites
 - Node.js version: v6.10.3
 - npm version: 3.10.10
 - Postgresql 16.0-1
 
-# POSTGRES DATABASE 
+# POSTGRES DATABASE AND RUN THE SERVER
 # Step 1: Install PostgreSQL
 If you haven't already installed PostgreSQL, you can do so from the official PostgreSQL website: https://www.postgresql.org/download/.
 
@@ -86,23 +88,25 @@ Please note that you need to have Node.js and npm installed on your system befor
 # RUNNING THE CLIENT
 You can run the server-side of the project by following these steps:
 
-# STEP 5:Navigate to the 'client' directory
+# STEP 1:Navigate to the 'client' directory
 
 ```
 cd client
 ```
 
-# STEP 6: Install the required dependencies
+# STEP 2: Install the required dependencies
 
 ```npm install
 ```
 
-# STEP 7: Start the client:
+# STEP 3: Start the client:
 
 ```
 npm start
 ```
 
-# STEP 8: VISIT THE PERN API PEOPLE
+# STEP 4: VISIT THE PERN API PEOPLE
 Visit: 'http://localhost:3000' in a browser to reach the index page
+The database and the "people" table are initially empty. 
+Now that you have set up and run the client application, you can create records by selecting the "Add Person" option from the main navigation menu and manage (EDIT,DELETE,SEARCH,SORTING) them by selecting "ALL PEOPLE" in main navigation. 
 
