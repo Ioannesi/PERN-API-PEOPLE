@@ -1,4 +1,4 @@
-#Step 1: Install PostgreSQL
+##Step 1: Install PostgreSQL
 If you haven't already installed PostgreSQL, you can do so from the official PostgreSQL website: https://www.postgresql.org/download/.
 
 
