@@ -10,7 +10,7 @@ The database is initially empty. When you have set up database, run both the bac
 - npm version: 3.10.10
 - Postgresql 16.0-1
 
-# POSTGRES DATABASE AND RUN THE SERVER
+# POSTGRES DATABASE AND RUN THE SERVER(The system does not support migration. To make it work, you need to follow these steps)
 # Step 1: Install PostgreSQL
 If you haven't already installed PostgreSQL, you can do so from the official PostgreSQL website: https://www.postgresql.org/download/.
 
@@ -26,7 +26,10 @@ In the above command, replace "your_username" with the username you created duri
 You will be prompted for the user's password. Enter your password you also create during PostgreSQL installation.Code is not visible when entering. 
 
 Then, you can create the database:
+
+```
 createdb mydatabase
+```
 
 In the above command, replace "mydatabase" with the desired name of the database."pernpeople" is suggested for the base name
 
@@ -34,6 +37,7 @@ After creating the database, you can proceed to Step 3.
 
 # Step 3: Create a "People" Table
 Next, you can create the "people" table:
+
 ```
 CREATE TABLE people (
     id UUID DEFAULT UUID_GENERATE_V4() PRIMARY KEY,
