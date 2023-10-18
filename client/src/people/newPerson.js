@@ -6,6 +6,7 @@ import ErrorModal from './ErrorModal';
 import LoadingSpinner from '../components/UIElements/LoadingSpinner';
 import {useHttpClient} from '../components/hooks/http-hook';
 
+
 import {
   firstname_validation,
   lastname_validation,
@@ -15,8 +16,8 @@ import { useState } from 'react'
 import './EditForm.css'
 
 
-
 const NewPerson = () => {
+
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
 
   const methods = useForm()
@@ -26,15 +27,15 @@ const NewPerson = () => {
     console.log(data)
    
     try {
-        // Ορίστε τα δεδομένα που θέλετε να στείλετε
+        
         const postData = {
           firstname: data.firstname,
           lastname: data.lastname,
           dateofbirth: data.dateofbirth
         }
   
-        // Κάντε το αίτημα POST στον εξυπηρετητή
-         await sendRequest("[PUTYOURIPV4HERE]:5000/people",
+        
+         await sendRequest('http://localhost:5000/people',
           'POST',
           JSON.stringify(postData),
           {

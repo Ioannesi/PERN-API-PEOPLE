@@ -13,13 +13,10 @@ import LoadingSpinner from '../components/UIElements/LoadingSpinner';
 
 
 const ListPeople = (props) => {
+
   const { isLoading, error, sendRequest, clearError, responseMessage } = useHttpClient();
   const [people, setPeople] = useState([]);
- 
   
- 
-
-
   const [personMessage, setPersonMessage] = useState(null);
   const [show, setShow]= useState(false);
   const [deletedId,setDeletedId]=useState("");
@@ -43,37 +40,40 @@ const handleClose =()=>{
 
 const handleClickDelete =(id)=> {
   setDeletedId(id)
-  setPersonMessage(`The Person '${deletedId}' was deleted successfully.`);
   setShow(true)
   console.log(id)
 }
 
-  
+
   useEffect(() => {
+    setPersonMessage(null);
       const fetchPeople = async () => {
         try {
           const responseData = await sendRequest(
-            '[PUTYOURIPV4HERE]:5000/people'
+            'http://localhost:5000/people'
           );
           setPeople(responseData);
-         
+          setPersonMessage('All People!')
         } catch (err) {}
       }; 
       fetchPeople();
     
-}, [sendRequest]);
+}, [sendRequest]); 
 
   
 
 const deletePerson= async (deletedId) => {
- 
+  setPersonMessage(null)
+
   try {
     setShow(false);
-    await sendRequest(`[PUTYOURIPV4HERE]:5000/people/${deletedId}`, 'DELETE');
+    await sendRequest(`http://localhost:5000/people/${deletedId}`, 'DELETE');
     props.onDelete(props.id);
-
-  } catch (err) {}
+  } 
+  catch (err) {}
   setPeople(people.filter((people) => people.id !== deletedId));
+  setPersonMessage(`The Person '${deletedId}' was deleted successfully.`);
+
 };
 
 
@@ -91,6 +91,7 @@ const clearSearch = () => {
 };
 
 const searchPeople = async () => {
+  setPersonMessage(null)
   if (isEmptySearch()) {
     refreshPage()
   } else {
@@ -98,14 +99,12 @@ const searchPeople = async () => {
     console.log(search)
     try {
       
-      const responseData  = await sendRequest('[PUTYOURIPV4HERE]:5000/people/search', 'POST', JSON.stringify(search), {
+      const responseData  = await sendRequest('http://localhost:5000/people/search', 'POST', JSON.stringify(search), {
         'Content-Type': 'application/json'
       });
         const resultCount = responseData.length;
         setPeople(responseData);
-        if(responseMessage){
         setPersonMessage(`Search Succesfull!Found ${resultCount} results`)
-        }
 
     } catch (err) {}
     
@@ -258,7 +257,7 @@ const searchPeople = async () => {
           <th className="th-sm">ID</th>
           <th className="th-sm">FIRSTNAME</th>
           <th className="th-sm">LASTNAME</th>
-          <th className="th-sm">DATEOFBIRTH</th>
+          <th className="th-sm">DATEOFBIRTH<br/>(dd/mm/yyyy)</th>
             <th>EDIT</th>
             <th>DELETE</th>
           </tr>

@@ -6,6 +6,17 @@ export const useHttpClient = () => {
   const [responseMessage, setResponseMessage] = useState (false);
   const activeHttpRequests = useRef([]);
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setResponseMessage(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [responseMessage]);
+   
+
   const sendRequest = useCallback(
     async (url, method = 'GET', body = null, headers = {}) => {
       setIsLoading(true);
@@ -26,13 +37,12 @@ export const useHttpClient = () => {
         activeHttpRequests.current = activeHttpRequests.current.filter(
           reqCtrl => reqCtrl !== httpAbortCtrl
         );
-        if (response.ok && (method === 'GET' ||method === 'DELETE' || method === 'PUT' || method === 'POST')) {
+        if (response.ok && (method === 'DELETE' || method=== 'POST' ||method==='GET')) {
           setResponseMessage(true);
         }
         if (!response.ok) {
           throw new Error(responseData.message);
         }
-
         setIsLoading(false);
         return responseData;
       } catch (err) {

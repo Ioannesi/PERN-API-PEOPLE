@@ -25,6 +25,8 @@ import './EditForm.css'
 
 
 const EditPerson = () => {
+
+
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const peopleId=useParams().peopleId;
   const methods = useForm()
@@ -43,7 +45,7 @@ const EditPerson = () => {
           try {
             console.log(peopleId)
             const responseData = await sendRequest(
-              `[PUTYOURIPV4HERE]:5000/people/${peopleId}`
+              `http://localhost:5000/people/${peopleId}`
             );
             setLoadedPerson(responseData);
            
@@ -64,7 +66,7 @@ const EditPerson = () => {
             dateofbirth: data.dateofbirth,
           }
           await sendRequest(
-            `____________________/people/${peopleId}`,
+            `http://localhost:5000/people/${peopleId}`,
             'PUT',
             JSON.stringify(updateData),
             {

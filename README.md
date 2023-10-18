@@ -10,7 +10,7 @@ The database is initially empty. When you have set up database, run both the bac
 - npm version: 3.10.10
 - Postgresql 16.0-1
 
-# POSTGRES DATABASE AND RUN THE SERVER
+# POSTGRES DATABASE AND RUN THE SERVER(The system does not support migration. To make it work, you need to follow these steps:)
 ## Step 1: Install PostgreSQL
 If you haven't already install PostgreSQL, you can do so from the official PostgreSQL website: https://www.postgresql.org/download/.
 
@@ -21,6 +21,7 @@ After installing PostgreSQL, open a terminal or command prompt and execute the f
 ```
 psql -U your_username
 ```
+
 In the above command, replace "your_username" with the username you created during PostgreSQL installation.
 
 You will be prompted for the user's password. Enter your password you also create during PostgreSQL installation.Code is not visible when entering. 
@@ -33,7 +34,14 @@ In the above command, replace "mydatabase" with the desired name of the database
 After creating the database, you can proceed to Step 3.
 
 ## Step 3: Create a "People" Table
-Next, you can create the "people" table:
+Connect to database by type the command:
+
+```
+\c mydatabase
+```
+
+Next, you can create the "people" table. Copy (Ctrl + C) and paste (Ctrl + V) the command:
+
 ```
 CREATE TABLE people (
     id UUID DEFAULT UUID_GENERATE_V4() PRIMARY KEY,
@@ -49,7 +57,7 @@ These commands will create a new database and a "people" table within it. You ca
 After you have cloned or downloaded the project using the following command: 
 
 ```
-git clone https://github.com/Ioannesi/PERN-API-PEOPLE.git.
+git clone https://github.com/Ioannesi/PERN-API-PEOPLE.git
 ```
 
 Οpen the .env file with a text editor and fill in the following information:
@@ -94,49 +102,29 @@ Connection has been established successfully.`
 Please note that you need to have Node.js and npm installed on your system before running the client application.
 
 # RUNNING THE CLIENT
-You can run the server-side of the project by following these steps:
-
-## STEP 1: [PUTYOURIPV4HERE]
--You should replace the [PUTYOURIPV4HERE] placeholders with your own IPv4 address in the following files: editPerson.js, listPeople.js, and newPerson.js with an editor. 
--You can find your IPv4 address by running the 
-```
-ipconfig
-```
-command in the command prompt."
-
-EXAMPLE for listpeople.js
-Locate the listPeople.js file in your program's directory.
-
-Open the listPeople.js file using a text editor such as Visual Studio Code, Notepad++, or Sublime Text.
-
-Use the "Find" feature available in most code editors to locate the text [PUTYOURIPV4HERE]. This feature allows you to search for text within the file.
-
-Once you've found the text [PUTYOURIPV4HERE], replace it with your own IPv4 address, such as 192.168.1.100.
-
-Save the file after making the changes.
-Do same for the file editPerson.js and newPerson.js
+You can run the client-side of the project by following these steps:
 
 
-## STEP 2:Navigate to the 'client' directory
+## STEP 1:Navigate to the 'client' directory
 
 ```
 cd client
 ```
 
-## STEP 3: Install the required dependencies
+## STEP 2: Install the required dependencies
 
 ```
 npm install
 ```
 
 
-## STEP 4: Start the client:
+## STEP 3: Start the client:
 
 ```
 npm start
 ```
 
-## STEP 5: VISIT THE PERN API PEOPLE
+## STEP 4: VISIT THE PERN API PEOPLE
 Visit: 'http://localhost:3000' in a browser to reach the index page
 The database and the "people" table are initially empty. 
 Now that you have set up and run the client application, you can create records by selecting the "Add Person" option from the main navigation menu and manage (EDIT,DELETE,SEARCH,SORTING) them by selecting "ALL PEOPLE" in main navigation. 
