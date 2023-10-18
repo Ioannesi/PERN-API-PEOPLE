@@ -53,7 +53,7 @@ These commands will create a new database and a "people" table within it. You ca
 After you have cloned or downloaded the project using the following command: 
 
 ```
-git clone https://github.com/Ioannesi/PERN-API-PEOPLE.git.
+git clone https://github.com/Ioannesi/PERN-API-PEOPLE.git
 ```
 
 Οpen the .env file with a text editor and fill in the following information:
